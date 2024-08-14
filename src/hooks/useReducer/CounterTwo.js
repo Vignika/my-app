@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-
+//const is immutable... i need to spread the state
 const initialState = {
     firstCounter: 0,
     secondCounter:10

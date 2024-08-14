@@ -2,19 +2,36 @@ import { createContext } from "react";
 import "./App.css";
 // import ComponentC from "./hooks/useContext/ComponentC";
 // import CounterOne from "./hooks/useReducer/CounterOne";
-import CounterTwo from "./hooks/useReducer/CounterTwo";
+// import CounterTwo from "./hooks/useReducer/CounterTwo";
 import CounterThree from "./hooks/useReducer/CounterThree";
+import ComponentA from "./hooks/contextReducer/ComponentA";
+import ComponentB from "./hooks/contextReducer/ComponentB";
+import ComponentC from "./hooks/useContext/ComponentC";
 
 
 export const ThemeContext = createContext(null);
+const initialState = 0
+const reducer = (state,action) => {
+
+  switch(action){
+      case 'increment': return state+1
+      case 'decrement' : return state -1
+      case 'reset':   return initialState
+      default: return state
+
+  }
+}
 
 //install axios
 function App() {
   return (
     <div>
       {/* <CounterOne/> */}
-      <CounterTwo/>
+      {/* <CounterTwo/> */}
       <CounterThree/>
+      <ComponentA/>
+      <ComponentB/>
+      <ComponentC/>
     </div>
   );
 }
