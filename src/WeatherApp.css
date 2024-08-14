@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://pics.craiyon.com/2023-09-17/5eef1e49327746a693841df3ccadce40.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .weather-app {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    font-size: 3em;
+    background: linear-gradient(45deg, #00dbde, #fc00ff);
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 1em;
+  }
+  
+  button {
+    padding: 15px;
+    background: #00dbde;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #fc00ff;
+  }
+  
+  .error {
+    color: #ff6b6b;
+    font-size: 1.2em;
+  }
+  
+  .weather-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .weather-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  
