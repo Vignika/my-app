@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
 import "./App.css";
 // import ComponentC from "./hooks/useContext/ComponentC";
 // import CounterOne from "./hooks/useReducer/CounterOne";
@@ -9,7 +9,8 @@ import ComponentB from "./hooks/contextReducer/ComponentB";
 import ComponentC from "./hooks/useContext/ComponentC";
 
 
-export const ThemeContext = createContext(null);
+// export const ThemeContext = createContext(null);
+export const CountContext = createContext();
 const initialState = 0
 const reducer = (state,action) => {
 
@@ -24,7 +25,9 @@ const reducer = (state,action) => {
 
 //install axios
 function App() {
+  const [count,dispatch] = useReducer(reducer,initialState)
   return (
+    <CountContext.Provider  value={{countState:count,countDispatch:dispatch}}>
     <div>
       {/* <CounterOne/> */}
       {/* <CounterTwo/> */}
@@ -33,6 +36,7 @@ function App() {
       <ComponentB/>
       <ComponentC/>
     </div>
+    </CountContext.Provider>
   );
 }
 
