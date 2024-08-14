@@ -1,46 +1,60 @@
-import { createContext, useReducer } from "react";
 import "./App.css";
-// import ComponentC from "./hooks/useContext/ComponentC";
-// import CounterOne from "./hooks/useReducer/CounterOne";
-// import CounterTwo from "./hooks/useReducer/CounterTwo";
-import CounterThree from "./hooks/useReducer/CounterThree";
-import ComponentA from "./hooks/contextReducer/ComponentA";
-import ComponentB from "./hooks/contextReducer/ComponentB";
-import ComponentC from "./hooks/useContext/ComponentC";
+import DataFetchingOne from "./hooks/useReducer/DataFetchingOne";
 
 
-// export const ThemeContext = createContext(null);
-export const CountContext = createContext();
-const initialState = 0
-const reducer = (state,action) => {
-
-  switch(action){
-      case 'increment': return state+1
-      case 'decrement' : return state -1
-      case 'reset':   return initialState
-      default: return state
-
-  }
-}
-
-//install axios
 function App() {
-  const [count,dispatch] = useReducer(reducer,initialState)
   return (
-    <CountContext.Provider  value={{countState:count,countDispatch:dispatch}}>
     <div>
-      {/* <CounterOne/> */}
-      {/* <CounterTwo/> */}
-      <CounterThree/>
-      <ComponentA/>
-      <ComponentB/>
-      <ComponentC/>
-    </div>
-    </CountContext.Provider>
-  );
+    <DataFetchingOne />
+  </div>
+ );
 }
-
 export default App;
+
+
+// import { createContext, useReducer } from "react";
+// import "./App.css";
+// // import ComponentC from "./hooks/useContext/ComponentC";
+// // import CounterOne from "./hooks/useReducer/CounterOne";
+// // import CounterTwo from "./hooks/useReducer/CounterTwo";
+// import CounterThree from "./hooks/useReducer/CounterThree";
+// import ComponentA from "./hooks/contextReducer/ComponentA";
+// import ComponentB from "./hooks/contextReducer/ComponentB";
+// import ComponentC from "./hooks/useContext/ComponentC";
+
+
+// // export const ThemeContext = createContext(null);
+// export const CountContext = createContext();
+// const initialState = 0
+// const reducer = (state,action) => {
+
+//   switch(action){
+//       case 'increment': return state+1
+//       case 'decrement' : return state -1
+//       case 'reset':   return initialState
+//       default: return state
+
+//   }
+// }
+
+// //install axios
+// function App() {
+//   const [count,dispatch] = useReducer(reducer,initialState)
+//   return (
+//     <CountContext.Provider  value={{countState:count,countDispatch:dispatch}}>
+//     <div>
+//       {/* <CounterOne/> */}
+//       {/* <CounterTwo/> */}
+//       <CounterThree/>
+//       <ComponentA/>
+//       <ComponentB/>
+//       <ComponentC/>
+//     </div>
+//     </CountContext.Provider>
+//   );
+// }
+
+// export default App;
 // import './App.css';
 // import WeatherApp from './WeatherApp';
 // // import ClassMouse from './hooks/useeffect/ClassMouse';
